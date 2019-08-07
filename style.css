@@ -1,0 +1,191 @@
+/* Start Base and Reusable */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box; 
+}
+html {
+    scroll-behavior: smooth;
+} 
+
+html,
+body {
+    
+    background-color: #f1f2f6;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 300;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    position: relative;
+} 
+
+
+.container a {
+    color: #fff;
+    text-decoration: none;
+}
+
+.container a:hover {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* End Base and Reusable */
+/* Start Header and Jumbotron */
+
+.jumbotron {
+    height: 700px;
+    background-image: -webkit-linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(images/daniel-korpai-mxPiMiz7KCo-unsplash.jpg);
+    background-image: linear-gradient(rgba(0, 0, 0, 0.7),rgba(0, 0, 0, 0.7)), url(images/daniel-korpai-mxPiMiz7KCo-unsplash.jpg);
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    width: 100%;
+}
+
+.clear {
+    background-color: transparent;
+    transition: background-color 1s ease 0s;
+}
+
+/* Class solid attached to navbar on scroll past first section, using script.js*/
+.solid {
+    background-color: rgba(0,0,0, .7);
+    transition: background-color 1s ease 0s;
+    box-shadow: 0 0 4px grey;
+}
+nav .container {
+    padding: 20px;
+}
+
+.hero-text {
+    padding-top: 3em;
+    overflow: hidden;
+}
+
+/* End Header and Jumbotron */
+/* Start Alubum Grid */
+
+main {
+    position: relative;
+    z-index: 10;
+    top: -100px;
+}
+.card {
+    max-height: 230px;
+    overflow: hidden;
+}
+
+.card .image {
+    transition: all 0.5s ease-in-out;
+}
+
+.card:hover .image {
+-moz-transform: scale(1.1);
+  -webkit-transform: scale(1.1);
+  transform: scale(1.2);
+}
+
+.card-img-overlay {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 100%;
+  width: 100%;
+  opacity: 0;
+  background: linear-gradient(45deg, rgba(71, 201, 229, 0.9) 0%, rgba(102, 252, 233, 0.9) 100%);
+}
+
+.card:hover .card-img-overlay {
+    opacity: 0.9;
+    transition: all 0.5s;
+}
+
+.card-title {
+    color: white;
+    font-size: 20px;
+    padding: 16px 32px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    -ms-transform: translate(-50%, -50%);
+}
+
+/* End Alubum Grid */
+/* Start Footer */
+
+footer {
+    background-color: #262626;
+    padding-top: 8em;
+    padding-bottom: 3em;
+    position: relative; 
+    color: white; 
+    font-size: 1em;
+}
+
+.social-media-widget li {
+    text-decoration: none;
+    list-style: none;
+}
+
+.social-media-widget a {
+    margin: 0 3px;
+    color: white;
+}
+
+.facebook a:hover {
+    color: #3C5A99;
+}
+
+.twitter a:hover {
+    color: #1DA1F2;
+}
+
+.linkedin a:hover {
+    color: #006192;
+}
+
+.github a:hover {
+    color: #6CC644;  
+}
+
+.codepen a:hover {
+    color: #AE63E4;  
+}
+
+.copyright {
+    color: #CCC;
+    font-size: .5em;
+}
+
+/* End Footer */
+/* Start JQuery, Media Queries */
+
+@media (max-width: 719px){
+    .jumbotron {
+        height: 500px;
+    }
+    .hero-text {
+        font-size: 1em;
+        padding-top: 6em;
+    }
+}
+
+@media (min-width: 720px) {
+    .hero-text {
+        font-size: 1.5em;
+        width: 100%;
+        padding-right: 2rem;
+        padding-top: 7em;
+    }
+}
+@media (min-width: 960px) {
+    .hero-text {
+        width: 66.666%;
+}
+/* End JQuery, Media Queries */
+
